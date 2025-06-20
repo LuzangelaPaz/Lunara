@@ -45,19 +45,9 @@ Lunara/
 
 ---
 
-## 📧 Contacto
-
-Para consultas o contribuciones, puedes escribir al correo:
-
-```
-atencionalcliente@lunara.com
-```
-
----
-
 ## 📝 Créditos
 
-Este proyecto fue creado con fines educativos como parte del curso de programación básica Talento Tech. Todas las imágenes y nombres son de uso ficticio o con fines demostrativos.
+Este proyecto fue creado con fines educativos como parte del curso de Programación Básica Talento Tech. Todas las imágenes y nombres son de uso ficticio o con fines demostrativos.
 
 ---
 
