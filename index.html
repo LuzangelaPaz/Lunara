@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lunara</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/favicon.jpg" type="image/png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Portada -->
+    <header class="hero">
+      <nav class="carrito-nav">
+        <button id="carrito-toggle" aria-label="Ver carrito">
+          🛒 Carrito <span id="contador-carrito">0</span>
+        </button>
+        <div id="mini-carrito" class="mini-carrito">
+          <ul id="mini-lista"></ul>
+          <p><strong>Total:</strong> $<span id="mini-total">0</span></p>
+          <button class="btn-carrito btn-pagar" onclick="irAPagar()">
+            Ir a pagar
+          </button>
+          <button class="btn-carrito btn-vaciar" onclick="vaciarCarrito()">
+            Vaciar carrito
+          </button>
+        </div>
+      </nav>
+      <div class="hero-texto">
+        <h1>LUNARA</h1>
+        <p class="slogan">Piezas elegantes que conservarás para siempre.</p>
+      </div>
+      <a href="#productos" class="btn-comprar">COMPRA AHORA</a>
+    </header>
+
+    <!-- Acerca de Lunara -->
+    <section id="acerca" class="acerca">
+      <div class="acerca-contenido">
+        <div class="acerca-texto">
+          <h2>ACERCA DE LUNARA</h2>
+          <p>
+            Un compromiso sin igual con la fabricación artesanal y las mejores
+            materias primas.
+          </p>
+        </div>
+        <div class="acerca-imagen">
+          <img src="img/acercade.jpg" alt="Sobre nosotros" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Productos -->
+    <section id="productos" class="productos">
+      <h2>Nuestros productos</h2>
+      <div class="grid">
+        <div class="producto">
+          <img src="img/anillo.jpg" alt="Anillo Absoluto" />
+          <h3>Anillo Absoluto</h3>
+          <p>$1.686.000 COP</p>
+          <button
+            onclick="agregarAlCarrito('Anillo absoluto', 1686000, 'img/anillo.jpg')"
+          >
+            Agregar al carrito
+          </button>
+        </div>
+        <div class="producto">
+          <img src="img/pulcera.jpg" alt="Pulcera trébol" />
+          <h3>Pulsera Trébol</h3>
+          <p>$2.500.000 COP</p>
+          <button
+            onclick="agregarAlCarrito('Pulcera Trébol', 2500000, 'img/pulcera.jpg')"
+          >
+            Agregar al carrito
+          </button>
+        </div>
+        <div class="producto">
+          <img src="img/arete.jpg" alt="Candongas entorchadas" />
+          <h3>Candongas Entorchadas</h3>
+          <p>$800.000 COP</p>
+          <button
+            onclick="agregarAlCarrito('Candongas Entorchadas', 800000, 'img/arete.jpg')"
+          >
+            Agregar al carrito
+          </button>
+        </div>
+        <div class="producto">
+          <img src="img/tobillera.jpg" alt="Tobillera mini balines" />
+          <h3>Tobillera Mini Balines</h3>
+          <p>$600.000 COP</p>
+          <button
+            onclick="agregarAlCarrito('Tobillera Mini Balines', 600000, 'img/tobillera.jpg')"
+          >
+            Agregar al carrito
+          </button>
+        </div>
+        <div class="producto">
+          <img src="img/rosario.jpg" alt="Rosario liso" />
+          <h3>Rosario Liso</h3>
+          <p>$1.250.000 COP</p>
+          <button
+            onclick="agregarAlCarrito('Rosario Liso', 1250000, 'img/rosario.jpg')"
+          >
+            Agregar al carrito
+          </button>
+        </div>
+        <div class="producto">
+          <img src="img/matrimonio.jpg" alt="Anillos de boda" />
+          <h3>Anillos de Boda Esterilla</h3>
+          <p>$3.000.000</p>
+          <button
+            onclick="agregarAlCarrito('Anillos de Boda Esterilla', 3000000, 'img/matrimonio.jpg')"
+          >
+            Agregar al carrito
+          </button>
+        </div>
+        <div class="producto">
+          <img src="img/pulcera2.jpg" alt="Pulcera clavo" />
+          <h3>Pulsera Clavo</h3>
+          <p>$1.450.000</p>
+          <button
+            onclick="agregarAlCarrito('Pulsera Clavo', 1450000, 'img/pulcera.jpg')"
+          >
+            Agregar al carrito
+          </button>
+        </div>
+        <div class="producto">
+          <img src="img/topos.jpg" alt="Topos rose" />
+          <h3>Topos Rose</h3>
+          <p>$1.315.000</p>
+          <button
+            onclick="agregarAlCarrito('Topos Rose', 1315000, 'img/topos.jpg')"
+          >
+            Agregar al carrito
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reseñas -->
+    <section id="reseñas" class="reseñas">
+      <h2>Reseñas de los compradores</h2>
+      <div class="grid">
+        <div class="reseña">
+          <p>“Un anillo hermoso, la calidad es excelente. ¡Recomendado!”</p>
+          <div class="reseña-footer">
+            <strong
+              >- María Herrera <span class="estrellas">★★★★★</span></strong
+            >
+          </div>
+        </div>
+        <div class="reseña">
+          <p>
+            “La pulcera es tal como en las fotos. Atención y entrega rápida.”
+          </p>
+          <div class="reseña-footer">
+            <strong
+              >- Rubén Hernández <span class="estrellas">★★★★☆</span></strong
+            >
+          </div>
+        </div>
+        <div class="reseña">
+          <p>
+            “Los aretes son únicos y muy elegantes. Definitivamente volveré a
+            comprar.”
+          </p>
+          <div class="reseña-footer">
+            <strong
+              >- Isabel Madrigal <span class="estrellas">★★★★★</span></strong
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <!-- Contacto -->
+  <footer class="footer">
+    <div class="footer-contenido">
+      <!-- Columna 1: Logo -->
+      <div class="footer-columna">
+        <img src="img/logo.jpg" alt="Logo Lunara" class="footer-logo" />
+      </div>
+
+      <!-- Columna 2: Información de contacto -->
+      <div class="footer-columna footer-info">
+        <h2>DATOS DE CONTACTO</h2>
+        <p>
+          <strong>Dirección:</strong> Calle 54 # 44 – 56 Barranquilla,<br />Atlántico,
+          C.P. 080002
+        </p>
+        <p><strong>Correo:</strong> atencionalcliente@lunara.com</p>
+        <p><strong>Teléfono:</strong> 605 3821519</p>
+        <div class="redes-sociales">
+          <a href="#" aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" aria-label="Facebook"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+        </div>
+      </div>
+
+      <!-- Columna 3: Formulario -->
+      <div class="footer-columna">
+        <h3 class="titulo-formulario">CONTÁCTANOS</h3>
+        <form class="formulario-contacto" id="formContacto">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required />
+
+          <label for="email">Correo:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="3" required></textarea>
+
+          <button type="submit">Enviar</button>
+          <p id="mensaje-exito" class="mensaje-exito" style="display: none">
+            ✅ Tu mensaje ha sido enviado con éxito.
+          </p>
+        </form>
+      </div>
+      <script src="script.js"></script>
+    </div>
+  </footer>
+</html>
